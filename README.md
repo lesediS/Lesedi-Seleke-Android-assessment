@@ -24,15 +24,15 @@ For the next **72 hours** you will have free reign to finish off what Steve star
 # Detail
 ## Bugs
 For reference to the original design check out the ***original_design.png*** file in the ***assets*** folder. 
-- [ ] Bug 1: On the about screen, there seems to be a layout issue with the question.
-- [ ] Bug 2: The preselected answer is not visible. 
-- [ ] Bug 3: When changing the answer to a question no selection is visible.
+- [ ] ~~Bug 1: On the about screen, there seems to be a layout issue with the question.~~
+- [ ] ~~Bug 2: The preselected answer is not visible.~~
+- [ ] ~~Bug 3: When changing the answer to a question no selection is visible.~~
 
 ## Profile View
 For designs check out the ***profile_view_designs*** folder in ***assets***.
 - [ ] ~~Choose which version of the profile view design you would like to attempt.~~
-- [ ] Create a generic, reusable version of your chosen design.
-- [ ] Display your view at the top of the About screen.
+- [ ] **Create a generic, reusable version of your chosen design.**
+- [ ] ~~Display your view at the top of the About screen.~~
 - [ ] Tapping on the image in your view should allow a user to select a new image to display from their gallery.
 - [ ] If a user updates their profile image, their image on the list of Engineers screen should also update.
 
