@@ -16,7 +16,7 @@ class ProfileImgCard @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
-    private val requestGalleryLauncher: ActivityResultLauncher<Intent>  // Inject ActivityResultLauncher
+    private val requestGalleryLauncher: ActivityResultLauncher<Intent>
 ) : CardView(context, attrs, defStyleAttr) {
 
     private val binding: ProfileDesignBinding
@@ -39,6 +39,6 @@ class ProfileImgCard @JvmOverloads constructor(
     }
 
     companion object {
-        private const val REQUEST_IMAGE_SELECT = 100  // Can be removed if not strictly needed
+        private const val REQUEST_IMAGE_SELECT = 100
     }
 }
