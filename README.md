@@ -30,7 +30,7 @@ For reference to the original design check out the ***original_design.png*** fil
 
 ## Profile View
 For designs check out the ***profile_view_designs*** folder in ***assets***.
-- [ ] Choose which version of the profile view design you would like to attempt.
+- [ ] ~~Choose which version of the profile view design you would like to attempt.~~
 - [ ] Create a generic, reusable version of your chosen design.
 - [ ] Display your view at the top of the About screen.
 - [ ] Tapping on the image in your view should allow a user to select a new image to display from their gallery.
