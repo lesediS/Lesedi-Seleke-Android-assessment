@@ -4,6 +4,7 @@ import com.glucode.about_you.engineers.models.Answer
 import com.glucode.about_you.engineers.models.Engineer
 import com.glucode.about_you.engineers.models.Question
 import com.glucode.about_you.engineers.models.QuickStats
+import java.util.Locale
 
 object MockData {
     val engineers = listOf(
@@ -86,4 +87,13 @@ object MockData {
             )
         )
     )
+
+    fun sortEngineersBy(criteria: String): List<Engineer> {
+        return when (criteria.lowercase(Locale.getDefault())) {
+            "years" -> engineers.sortedBy { it.quickStats.years }
+            "coffees" -> engineers.sortedBy { it.quickStats.coffees }
+            "bugs" -> engineers.sortedBy { it.quickStats.bugs }
+            else -> engineers //Original order if option is invalid
+        }
+    }
 }

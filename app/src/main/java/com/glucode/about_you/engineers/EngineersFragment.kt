@@ -30,10 +30,26 @@ class EngineersFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_years) {
-            return true
+        return when (item.itemId) {
+            R.id.action_years -> {
+                sortEngineers("years")
+                true
+            }
+            R.id.action_coffees -> {
+                sortEngineers("coffees")
+                true
+            }
+            R.id.action_bugs -> {
+                sortEngineers("bugs")
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
-        return super.onOptionsItemSelected(item)
+    }
+
+    private fun sortEngineers(criteria: String) {
+        val sortedEngineers = MockData.sortEngineersBy(criteria)
+        setUpEngineersList(sortedEngineers)
     }
 
     private fun setUpEngineersList(engineers: List<Engineer>) {
