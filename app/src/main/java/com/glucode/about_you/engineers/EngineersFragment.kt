@@ -47,8 +47,9 @@ class EngineersFragment : Fragment() {
         }
     }
 
+    //Sorting the engineers...
     private fun sortEngineers(criteria: String) {
-        val sortedEngineers = MockData.sortEngineersBy(criteria)
+        val sortedEngineers = MockData.sortEngineersBy(criteria) //... according to criteria data from MockData file
         setUpEngineersList(sortedEngineers)
     }
 

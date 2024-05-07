@@ -5,15 +5,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/container"
-        app:dividerPadding="0dp"
-        app:showDividers="beginning|middle|end"
-        app:divider="@drawable/ic_filter"
         android:layout_width="match_parent"
-        android:clipChildren="false"
-        android:clipToPadding="false"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/padding_normal"
-        android:orientation="vertical" />
+        android:orientation="vertical">
+
+        <include layout="@layout/profile_design" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            app:dividerPadding="0dp"
+            app:showDividers="beginning|middle|end"
+            app:divider="@drawable/ic_filter"
+            android:layout_width="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_normal"
+            android:orientation="vertical" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.core.widget.NestedScrollView>

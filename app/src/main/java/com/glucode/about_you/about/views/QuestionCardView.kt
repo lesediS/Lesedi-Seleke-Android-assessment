@@ -54,14 +54,17 @@ class QuestionCardView @JvmOverloads constructor(
     }
 
     private fun onAnswerClick(view: View) {
-        if (!view.isSelected) {
-            binding.answers.children.filter { it.isSelected }.forEach {
-                it.isSelected = false
-            }
+        val selectedIndex = binding.answers.indexOfChild(view)
+        if (selectedIndex != selection) { //If selected answer is different from default/current answer...
+            setSelection(selectedIndex) // ... call function to set answer
         }
     }
 
-    private fun setSelection() {
-
+    private fun setSelection(index: Int) {
+        binding.answers.children.forEach { it.isSelected = false } //Deselect default answer
+        if (index in 0 until binding.answers.childCount) { //Select answer chosen at index
+            binding.answers.getChildAt(index).isSelected = true
+        }
+        selection = index //Update selected index
     }
 }

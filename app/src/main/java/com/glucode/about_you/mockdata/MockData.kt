@@ -90,10 +90,10 @@ object MockData {
 
     fun sortEngineersBy(criteria: String): List<Engineer> {
         return when (criteria.lowercase(Locale.getDefault())) {
-            "years" -> engineers.sortedBy { it.quickStats.years }
+            "years" -> engineers.sortedBy { it.quickStats.years } //Sort list of engineers by years, etc.
             "coffees" -> engineers.sortedBy { it.quickStats.coffees }
             "bugs" -> engineers.sortedBy { it.quickStats.bugs }
-            else -> engineers //Original order if option is invalid
+            else -> engineers
         }
     }
 }
