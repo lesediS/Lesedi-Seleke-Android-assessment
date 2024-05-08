@@ -24,7 +24,9 @@
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 android:padding="@dimen/padding_small"
-                android:contentDescription="Profile Image View" />
+                android:clickable="true"
+                android:contentDescription="Profile Image View"
+                android:focusable="true" />
 
         <LinearLayout
             android:id="@+id/detailsLay"
