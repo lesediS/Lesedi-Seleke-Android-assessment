@@ -8,8 +8,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.activity.result.ActivityResultLauncher
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.FragmentActivity
-import com.glucode.about_you.R
 import com.glucode.about_you.databinding.ProfileDesignBinding
 
 class ProfileImgCard @JvmOverloads constructor(
@@ -24,7 +22,10 @@ class ProfileImgCard @JvmOverloads constructor(
     init {
         binding = ProfileDesignBinding.inflate(LayoutInflater.from(context), this, true)
 
-        binding.picCardVw.setOnClickListener {
+        binding.profileImage.isClickable = true
+        binding.profileImage.isFocusable = true
+
+        binding.profileImage.setOnClickListener {
             openGallery()
         }
     }
