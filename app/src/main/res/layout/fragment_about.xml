@@ -12,7 +12,9 @@
         <com.glucode.about_you.about.ProfileImgCard
             android:id="@+id/profileImgCard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"/>
 
 
         <LinearLayout

@@ -22,7 +22,7 @@ import com.glucode.about_you.mockdata.MockData
 class AboutFragment : Fragment() {
     private lateinit var binding: FragmentAboutBinding
     private lateinit var pickImageLauncher: ActivityResultLauncher<Intent>
-    private val REQUEST_STORAGE_CODE = 100
+    private val CODE = 100
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,7 +46,10 @@ class AboutFragment : Fragment() {
             }
         }
 
-        binding.profileImgCard.setPickImageLauncher(pickImageLauncher)
+//        binding.profileImgCard.setOnClickListener{
+//            requestStoragePermission()
+//        }
+//        binding.profileImgCard.setPickImageLauncher(pickImageLauncher)
     }
 
     private fun setUpQuestions() {
@@ -62,7 +65,7 @@ class AboutFragment : Fragment() {
         }
     }
 
-    fun requestStoragePermission() {
+    private fun requestStoragePermission() {
         if (ContextCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.READ_EXTERNAL_STORAGE
@@ -70,7 +73,7 @@ class AboutFragment : Fragment() {
         ) {
             requestPermissions(
                 arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
-                REQUEST_STORAGE_CODE
+                CODE
             )
         } else {
             pickImageLauncher.launch(
@@ -86,7 +89,7 @@ class AboutFragment : Fragment() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == REQUEST_STORAGE_CODE && grantResults.isNotEmpty() &&
+        if (requestCode == CODE && grantResults.isNotEmpty() &&
             grantResults[0] == PackageManager.PERMISSION_GRANTED
         ) {
             pickImageLauncher.launch(
